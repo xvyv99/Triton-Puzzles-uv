@@ -1,0 +1,24 @@
+[project]
+name = "triton-puzzles"
+version = "0.1.0"
+description = "A series of Triton exercises."
+readme = "README.md"
+requires-python = "==3.10.*"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "jaxtyping>=0.2.34",
+    "torch>=2.4.1",
+    "triton==3.1.0",
+    "triton-viz",
+    "fastapi==0.111.0",
+]
+
+[tool.uv.sources]
+# triton = { url = "https://dl.cloudsmith.io/public/test-wha/triton-puzzles/raw/files/triton-3.0.0-cp310-cp310-linux_x86_64.whl" }
+triton-viz = { git = "https://github.com/Deep-Learning-Profiling-Tools/triton-viz", rev = "v1.1" }
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu121"
+
+[tool.uv]
+index-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
